@@ -642,3 +642,15 @@ The `main.tf` sample file includes a delegate token option, facilitating automat
 
 #### What are there discrepancies between the user list, access control, and dashboard?
 Harness includes user login data in audit history, but it's not structured for analytics purposes. Creating a custom view for this data isn't currently supported.
+
+#### How to get step id and status for steps running under matrix, without using identifier
+You can use below command and with the help of jq you can filter the response
+```
+t='<+json.format(<+pipeline.stages.aaa.spec.execution.steps.ShellScript_1>)>'
+echo $t | jq '(. | to_entries[] | select(.key | startswith("ShellScript_1")) | {Status: .value.status, Suffix: .value.identifierPostFix})'
+```
+
+#### How to list the complete json data for matrix stage
+You can use json format to get the complete json
+```
+t='<+json.format(<+pipeline.stages.stageWithMatrix>)>'
