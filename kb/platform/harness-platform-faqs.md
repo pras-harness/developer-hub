@@ -2182,6 +2182,16 @@ The delegate won't attempt to acquire any new tasks until the resource level inc
 
 The `PL_NO_EMAIL_FOR_SAML_ACCOUNT_INVITES` feature flag works for user invites. When a user is added as member to a user group, a separate notification is sent, which is not dependent on this feature flag.
 
+#### How to install powershell on harness delegate?
+Harness delegate uses RHEL as base image so you can download by following below link
+https://learn.microsoft.com/en-us/powershell/scripting/install/install-rhel?view=powershell-7.4
+
+####  Does default harness delegate comes with jq?
+No by default jq is not installed, you can use microdnf to install
+```
+microdnf install jq
+```
+
 ## Git Experience
 
 ### Can we customize the SSH configuration when using a Git connector set by SSH?
