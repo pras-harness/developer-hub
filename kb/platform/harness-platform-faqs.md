@@ -803,6 +803,20 @@ You can find this value on the Authentication page (right below the Overview men
 
 The most probable root cause is that there is a difference in query for this user group/user (like DC), so check and confirm and add the corresponding user query.
 
+### What is the default session timeout for a user in Harness?
+
+The default session timeout is 1440 minutes (1 day). Admins can configure and update this value as needed.
+
+### What is the maximum and minimum allowed session timeout?
+
+* Maximum: 4320 minutes (3 days)
+* Minimum: 30 minutes
+
+
+### Why am I getting logged out of Harness even while actively using it?
+
+This may be due to the Absolute Session Timeout setting. When this is configured, users are automatically logged out after the specified time, regardless of activity.
+
 ## Automation
 
 ### How can I use Harness CD with Google Cloud Functions?
