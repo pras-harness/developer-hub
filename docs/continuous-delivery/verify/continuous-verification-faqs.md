@@ -175,3 +175,9 @@ These logs follow Harness’s data retention policies:
 [View data retention policy](https://developer.harness.io/docs/platform/references/data-retention/)
 - Audit trail data is retained for up to 2 years.
 [Learn more about audit trails](https://developer.harness.io/docs/platform/governance/audit-trail/)
+
+### Will variable expressions work in a regular Monitored Service health source, or only in a Monitored Service template?
+Variable expressions will only work with Template Monitored Services. They are not supported in regular (non-templatized) Monitored Services.
+
+### What is the Learning Engine Task shown under Execution Logs for the Verify step?
+The Learning Engine Task is a machine learning-based analysis task that processes the collected telemetry and metrics data during the verification phase.
